@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manthan | Silent Reading Space & Digital Library — Daltonganj, Jharkhand</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            parchment: '#FAF7F0',
+            cream: '#F3EDE0',
+            forest: '#1B3B2B',
+            forestLight: '#28523D',
+            terracotta: '#C86D51',
+            gold: '#D4A359',
+            ink: '#1F2421',
+            muted: '#5C635E'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-parchment text-ink font-sans antialiased selection:bg-terracotta selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-forest text-parchment text-xs sm:text-sm py-2 px-4 text-center tracking-wide">
+    <span>📍 Now Open in Daltonganj (Medininagar), Jharkhand • Silent AC Reading Hall + Free Online E-Books for Members</span>
+  </div>
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-40 bg-parchment/95 backdrop-blur border-b border-forest/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-lg bg-forest text-gold flex items-center justify-center font-serif text-xl font-bold shadow-sm group-hover:bg-forestLight transition">
+          म
+        </div>
+        <div>
+          <span class="font-serif text-2xl font-bold text-forest tracking-tight block leading-none">Manthan</span>
+          <span class="text-[11px] uppercase tracking-widest text-muted font-medium">Reading Space & E-Library</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/80">
+        <a href="#space" class="hover:text-forest transition">Seating & Amenities</a>
+        <a href="#shifts" class="hover:text-forest transition">Shifts & Plans</a>
+        <a href="#elibrary" class="hover:text-forest transition">Online E-Books</a>
+        <a href="#location" class="hover:text-forest transition">Daltonganj Location</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button onclick="openSeatModal('Full-Day Reserve')" class="bg-forest hover:bg-forestLight text-parchment text-sm font-medium px-5 py-2.5 rounded-lg shadow-sm transition">
+          Book a Seat
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden py-16 sm:py-24 border-b border-forest/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cream border border-forest/15 text-forest text-xs font-semibold uppercase tracking-wider">
+          <span>Daltonganj • Medininagar, Jharkhand</span>
+        </div>
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-forest leading-[1.12]">
+          A Quiet Sanctuary for Deep Study &amp; Focused Reading.
+        </h1>
+        <p class="text-base sm:text-lg text-muted max-w-2xl leading-relaxed">
+          Designed for JPSC, UPSC, SSC, Banking, NEET/JEE aspirants, and avid readers in Daltonganj. Bring your own books and notes to our distraction-free ergonomic seating hall—and unlock curated <strong class="text-forest font-semibold">online e-books and digital study material</strong> right from your desk.
+        </p>
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <button onclick="openSeatModal('Morning Shift')" class="bg-terracotta hover:bg-terracotta/90 text-white font-medium px-6 py-3.5 rounded-lg shadow-md transition">
+            Reserve Your Study Seat
+          </button>
+          <a href="#elibrary" class="bg-cream hover:bg-forest/10 text-forest border border-forest/20 font-medium px-6 py-3.5 rounded-lg transition">
+            Explore Online Books →
+          </a>
+        </div>
+        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-forest/10 max-w-lg">
+          <div>
+            <p class="font-serif text-2xl font-bold text-forest">60+</p>
+            <p class="text-xs text-muted">Ergonomic Cabins</p>
+          </div>
+          <div>
+            <p class="font-serif text-2xl font-bold text-forest">16 Hrs</p>
+            <p class="text-xs text-muted">Daily Open (6 AM–10 PM)</p>
+          </div>
+          <div>
+            <p class="font-serif text-2xl font-bold text-forest">500+</p>
+            <p class="text-xs text-muted">Online E-Books &amp; PDFs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="bg-forest text-parchment rounded-2xl p-8 shadow-xl relative overflow-hidden">
+          <div class="absolute -right-8 -top-8 w-36 h-36 rounded-full bg-gold/15"></div>
+          <span class="text-xs uppercase tracking-widest text-gold font-semibold">How Manthan Works</span>
+          <h2 class="font-serif text-2xl font-bold mt-2 mb-6">Your Dedicated Study Desk</h2>
+          <ul class="space-y-4 text-sm text-parchment/90">
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-gold/20 text-gold flex items-center justify-center shrink-0 font-bold text-xs">1</span>
+              <span><strong>Seating &amp; Reading Space Only:</strong> We do not lend physical books. Bring your personal textbooks, notebooks, or laptop and study in pin-drop silence.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-gold/20 text-gold flex items-center justify-center shrink-0 font-bold text-xs">2</span>
+              <span><strong>Individual Cabin Comfort:</strong> Every desk includes a personal LED study lamp, dedicated power socket, and cushioned ergonomic chair.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-gold/20 text-gold flex items-center justify-center shrink-0 font-bold text-xs">3</span>
+              <span><strong>Free Online Book Vault:</strong> Registered members get instant digital access to NCERTs, Jharkhand GK PDFs, magazines, and classics on their phone or laptop.</span>
+            </li>
+          </ul>
+          <div class="mt-8 pt-5 border-t border-parchment/15 flex items-center justify-between text-xs">
+            <span class="text-parchment/75">Free 1-Day Trial Seat Available</span>
+            <button onclick="openSeatModal('Free 1-Day Trial')" class="text-gold font-semibold hover:underline">Claim Trial →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities Section -->
+  <section id="space" class="py-16 sm:py-20 bg-cream/60 border-b border-forest/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-12">
+        <span class="text-xs font-semibold uppercase tracking-widest text-terracotta">Built for Concentration</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest mt-1">Everything You Need for Long Study Hours</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-parchment p-6 rounded-xl border border-forest/10 shadow-sm">
+          <div class="text-2xl mb-3">🪑</div>
+          <h3 class="font-serif text-lg font-bold text-forest mb-1">Partitioned Study Cabins</h3>
+          <p class="text-sm text-muted leading-relaxed">Wide individual wooden desks with privacy dividers and comfortable cushioned chairs for zero visual distraction.</p>
+        </div>
+        <div class="bg-parchment p-6 rounded-xl border border-forest/10 shadow-sm">
+          <div class="text-2xl mb-3">⚡</div>
+          <h3 class="font-serif text-lg font-bold text-forest mb-1">Personal Light &amp; Power</h3>
+          <p class="text-sm text-muted leading-relaxed">Every single seat features an individual eye-care LED lamp and a dedicated charging socket for laptops and tablets.</p>
+        </div>
+        <div class="bg-parchment p-6 rounded-xl border border-forest/10 shadow-sm">
+          <div class="text-2xl mb-3">📶</div>
+          <h3 class="font-serif text-lg font-bold text-forest mb-1">High-Speed Fiber Wi-Fi</h3>
+          <p class="text-sm text-muted leading-relaxed">Dual-band high-speed internet so you can attend online lectures and browse the Manthan Online E-Library smoothly.</p>
+        </div>
+        <div class="bg-parchment p-6 rounded-xl border border-forest/10 shadow-sm">
+          <div class="text-2xl mb-3">❄️</div>
+          <h3 class="font-serif text-lg font-bold text-forest mb-1">Fully Air-Conditioned Hall</h3>
+          <p class="text-sm text-muted leading-relaxed">Cool, quiet, climate-controlled environment with inverter/generator power backup during Daltonganj power cuts.</p>
+        </div>
+        <div class="bg-parchment p-6 rounded-xl border border-forest/10 shadow-sm">
+          <div class="text-2xl mb-3">💧</div>
+          <h3 class="font-serif text-lg font-bold text-forest mb-1">RO Drinking Water &amp; Washrooms</h3>
+          <p class="text-sm text-muted leading-relaxed">Chilled &amp; normal RO purified drinking water, clean separate washrooms, and a dedicated outdoor break/tiffin zone.</p>
+        </div>
+        <div class="bg-parchment p-6 rounded-xl border border-forest/10 shadow-sm">
+          <div class="text-2xl mb-3">🔒</div>
+          <h3 class="font-serif text-lg font-bold text-forest mb-1">CCTV Security &amp; Lockers</h3>
+          <p class="text-sm text-muted leading-relaxed">24/7 CCTV surveillance, secure two-wheeler parking, and optional monthly personal lockers to leave your heavy books safely.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shifts & Membership Plans -->
+  <section id="shifts" class="py-16 sm:py-20 border-b border-forest/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-semibold uppercase tracking-widest text-terracotta">Flexible Study Timings</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest mt-1">Seating Shifts &amp; Monthly Plans</h2>
+        <p class="text-sm text-muted mt-2">All plans include a dedicated reading seat, high-speed Wi-Fi, and unlimited access to our Online E-Book Portal.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Shift 1 -->
+        <div class="bg-cream/50 border border-forest/15 rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-semibold uppercase tracking-wider text-forest bg-forest/10 px-2.5 py-1 rounded">Morning Shift</span>
+              <span class="text-xs font-medium text-emerald-700">● 8 Seats Left</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-forest">6:00 AM – 12:00 PM</h3>
+            <p class="text-xs text-muted mt-1">6 Hours Daily • Best for early risers</p>
+            <div class="my-5">
+              <span class="font-serif text-3xl font-bold text-forest">₹500</span>
+              <span class="text-xs text-muted">/ month</span>
+            </div>
+            <ul class="text-xs text-ink/80 space-y-2 border-t border-forest/10 pt-4">
+              <li>✓ Unreserved AC Reading Seat</li>
+              <li>✓ Free Wi-Fi &amp; Charging Point</li>
+              <li>✓ Full Online E-Book Access</li>
+            </ul>
+          </div>
+          <button onclick="openSeatModal('Morning Shift (6 AM - 12 PM)')" class="mt-6 w-full py-2.5 rounded-lg border border-forest text-forest hover:bg-forest hover:text-parchment text-sm font-medium transition">
+            Select Morning Shift
+          </button>
+        </div>
+
+        <!-- Shift 2 -->
+        <div class="bg-cream/50 border border-forest/15 rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-semibold uppercase tracking-wider text-forest bg-forest/10 px-2.5 py-1 rounded">Afternoon Shift</span>
+              <span class="text-xs font-medium text-emerald-700">● 11 Seats Left</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-forest">12:00 PM – 6:00 PM</h3>
+            <p class="text-xs text-muted mt-1">6 Hours Daily • Cool afternoon study</p>
+            <div class="my-5">
+              <span class="font-serif text-3xl font-bold text-forest">₹500</span>
+              <span class="text-xs text-muted">/ month</span>
+            </div>
+            <ul class="text-xs text-ink/80 space-y-2 border-t border-forest/10 pt-4">
+              <li>✓ Unreserved AC Reading Seat</li>
+              <li>✓ Free Wi-Fi &amp; Charging Point</li>
+              <li>✓ Full Online E-Book Access</li>
+            </ul>
+          </div>
+          <button onclick="openSeatModal('Afternoon Shift (12 PM - 6 PM)')" class="mt-6 w-full py-2.5 rounded-lg border border-forest text-forest hover:bg-forest hover:text-parchment text-sm font-medium transition">
+            Select Afternoon Shift
+          </button>
+        </div>
+
+        <!-- Shift 3 -->
+        <div class="bg-cream/50 border border-forest/15 rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-semibold uppercase tracking-wider text-forest bg-forest/10 px-2.5 py-1 rounded">Evening Shift</span>
+              <span class="text-xs font-medium text-amber-700">● 5 Seats Left</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-forest">4:00 PM – 10:00 PM</h3>
+            <p class="text-xs text-muted mt-1">6 Hours Daily • Ideal post-college</p>
+            <div class="my-5">
+              <span class="font-serif text-3xl font-bold text-forest">₹500</span>
+              <span class="text-xs text-muted">/ month</span>
+            </div>
+            <ul class="text-xs text-ink/80 space-y-2 border-t border-forest/10 pt-4">
+              <li>✓ Unreserved AC Reading Seat</li>
+              <li>✓ Free Wi-Fi &amp; Charging Point</li>
+              <li>✓ Full Online E-Book Access</li>
+            </ul>
+          </div>
+          <button onclick="openSeatModal('Evening Shift (4 PM - 10 PM)')" class="mt-6 w-full py-2.5 rounded-lg border border-forest text-forest hover:bg-forest hover:text-parchment text-sm font-medium transition">
+            Select Evening Shift
+          </button>
+        </div>
+
+        <!-- Full Day Reserve -->
+        <div class="bg-forest text-parchment rounded-2xl p-6 shadow-lg flex flex-col justify-between relative">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-semibold uppercase tracking-wider bg-gold text-forest px-2.5 py-1 rounded">Most Popular</span>
+              <span class="text-xs font-medium text-gold">● 4 Cabins Left</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold">Full-Day Reserved</h3>
+            <p class="text-xs text-parchment/75 mt-1">6:00 AM – 10:00 PM (16 Hours)</p>
+            <div class="my-5">
+              <span class="font-serif text-3xl font-bold text-gold">₹950</span>
+              <span class="text-xs text-parchment/75">/ month</span>
+            </div>
+            <ul class="text-xs text-parchment/90 space-y-2 border-t border-parchment/15 pt-4">
+              <li>✓ Fixed Permanent Cabin Number</li>
+              <li>✓ Personal Book Storage Locker</li>
+              <li>✓ High-Speed Wi-Fi &amp; Power Backup</li>
+              <li>✓ Priority Online E-Book &amp; Test PDFs</li>
+            </ul>
+          </div>
+          <button onclick="openSeatModal('Full-Day Reserved Cabin')" class="mt-6 w-full py-2.5 rounded-lg bg-terracotta hover:bg-terracotta/90 text-white text-sm font-medium transition">
+            Reserve Fixed Cabin
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Online Digital E-Book Library -->
+  <section id="elibrary" class="py-16 sm:py-20 bg-cream/60 border-b border-forest/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-widest text-terracotta">Manthan Digital Vault</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest mt-1">Read Online Books &amp; Study PDFs</h2>
+          <p class="text-sm text-muted mt-2 max-w-2xl">
+            While we do not keep physical books for borrowing, every Manthan reader can read curated e-books, NCERT compilations, Jharkhand GK notes, and literature directly online.
+          </p>
+        </div>
+
+        <div class="w-full md:w-72">
+          <input
+            type="text"
+            id="bookSearch"
+            onkeyup="filterBooks()"
+            placeholder="Search online books or exams..."
+            class="w-full px-4 py-2.5 rounded-lg bg-parchment border border-forest/20 text-sm focus:outline-none focus:border-forest"
+          />
+        </div>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap gap-2 mb-8" id="categoryButtons">
+        <button onclick="setCategory('All', this)" class="cat-btn active px-4 py-1.5 rounded-full text-xs font-semibold bg-forest text-parchment transition">All E-Books</button>
+        <button onclick="setCategory('JPSC & Jharkhand GK', this)" class="cat-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-parchment text-forest border border-forest/15 hover:bg-forest/10 transition">JPSC &amp; Jharkhand GK</button>
+        <button onclick="setCategory('UPSC & NCERT', this)" class="cat-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-parchment text-forest border border-forest/15 hover:bg-forest/10 transition">UPSC &amp; NCERT</button>
+        <button onclick="setCategory('SSC & Banking', this)" class="cat-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-parchment text-forest border border-forest/15 hover:bg-forest/10 transition">SSC &amp; Banking</button>
+        <button onclick="setCategory('Hindi & English Literature', this)" class="cat-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-parchment text-forest border border-forest/15 hover:bg-forest/10 transition">Hindi &amp; English Literature</button>
+      </div>
+
+      <!-- E-Books Grid -->
+      <div id="ebookGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- Location & Contact (Daltonganj, Jharkhand) -->
+  <section id="location" class="py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-5 space-y-5">
+        <span class="text-xs font-semibold uppercase tracking-widest text-terracotta">Visit Our Reading Hall</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest">Located in the Heart of Daltonganj</h2>
+        <p class="text-sm text-muted leading-relaxed">
+          Easily accessible from Station Road, Redma, and College Chowk in Daltonganj (Medininagar), Palamu district, Jharkhand. Drop in for a free tour or a 1-day trial session.
+        </p>
+
+        <div class="space-y-3 text-sm pt-2">
+          <div class="flex items-start gap-3">
+            <span class="text-forest font-bold">📍 Address:</span>
+            <span class="text-ink/85">Manthan Reading Space &amp; Digital Library, Daltonganj (Medininagar), Palamu, Jharkhand – 822101</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-forest font-bold">🕒 Timings:</span>
+            <span class="text-ink/85">Monday – Sunday: 6:00 AM to 10:00 PM</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-forest font-bold">📞 Phone / WhatsApp:</span>
+            <span class="text-ink/85">+91 98765 43210 (Update with your brother's number)</span>
+          </div>
+        </div>
+
+        <div class="pt-3 flex flex-wrap gap-3">
+          <a href="https://maps.google.com/?q=Daltonganj,Jharkhand" target="_blank" rel="noopener noreferrer" class="bg-forest hover:bg-forestLight text-parchment text-sm font-medium px-5 py-3 rounded-lg transition">
+            Open in Google Maps ↗
+          </a>
+          <button onclick="openSeatModal('Visit & Free Trial')" class="bg-cream hover:bg-forest/10 text-forest border border-forest/20 text-sm font-medium px-5 py-3 rounded-lg transition">
+            Schedule a Visit
+          </button>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="rounded-2xl overflow-hidden border border-forest/15 shadow-md bg-cream h-80 sm:h-96">
+          <iframe
+            title="Manthan Library Daltonganj Jharkhand Map"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=84.0450%2C24.0150%2C84.0950%2C24.0550&layer=mapnik&marker=24.0355%2C84.0695"
+            class="w-full h-full border-0"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-forest text-parchment/85 py-10 border-t border-parchment/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+      <div>
+        <span class="font-serif text-xl font-bold text-parchment">Manthan</span>
+        <span class="text-parchment/60 ml-2">• Silent Seating Space &amp; Online Library, Daltonganj, Jharkhand</span>
+      </div>
+      <p class="text-xs text-parchment/60">© 2026 Manthan Reading Space, Daltonganj. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Seat Booking Modal -->
+  <div id="seatModal" class="fixed inset-0 z-50 hidden bg-ink/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-parchment rounded-2xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-forest/15 relative">
+      <button onclick="closeSeatModal()" class="absolute top-4 right-4 text-muted hover:text-ink text-xl font-bold">&times;</button>
+      <span class="text-xs font-semibold uppercase tracking-widest text-terracotta">Manthan Daltonganj</span>
+      <h3 class="font-serif text-2xl font-bold text-forest mt-1">Reserve Your Study Seat</h3>
+      <p class="text-xs text-muted mt-1 mb-5">Fill in your details to book your shift or claim a free 1-day trial.</p>
+
+      <form onsubmit="submitSeatForm(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-forest mb-1">Full Name</label>
+          <input type="text" required placeholder="e.g., Rahul Kumar" class="w-full px-3.5 py-2.5 rounded-lg bg-white border border-forest/20 text-sm focus:outline-none focus:border-forest" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-forest mb-1">Mobile / WhatsApp Number</label>
+          <input type="tel" required placeholder="e.g., 9876543210" class="w-full px-3.5 py-2.5 rounded-lg bg-white border border-forest/20 text-sm focus:outline-none focus:border-forest" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-forest mb-1">Preferred Shift / Plan</label>
+          <select id="selectedPlan" class="w-full px-3.5 py-2.5 rounded-lg bg-white border border-forest/20 text-sm focus:outline-none focus:border-forest">
+            <option>Morning Shift (6 AM - 12 PM)</option>
+            <option>Afternoon Shift (12 PM - 6 PM)</option>
+            <option>Evening Shift (4 PM - 10 PM)</option>
+            <option>Full-Day Reserved Cabin</option>
+            <option>Free 1-Day Trial</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-forest mb-1">Preparing For (Optional)</label>
+          <input type="text" placeholder="e.g., JPSC, SSC CGL, Banking, NEET, Self-Study" class="w-full px-3.5 py-2.5 rounded-lg bg-white border border-forest/20 text-sm focus:outline-none focus:border-forest" />
+        </div>
+        <button type="submit" class="w-full bg-forest hover:bg-forestLight text-parchment font-medium py-3 rounded-lg transition shadow-sm">
+          Confirm Seat Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Online E-Book Reader Preview Modal -->
+  <div id="readerModal" class="fixed inset-0 z-50 hidden bg-ink/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-parchment rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-forest/15 relative">
+      <button onclick="closeReaderModal()" class="absolute top-4 right-4 text-muted hover:text-ink text-xl font-bold">&times;</button>
+      <span id="readerCategory" class="text-xs font-semibold uppercase tracking-widest text-terracotta">Category</span>
+      <h3 id="readerTitle" class="font-serif text-2xl font-bold text-forest mt-1">Book Title</h3>
+      <p id="readerAuthor" class="text-xs text-muted mb-4">Author</p>
+      <div class="bg-cream p-4 rounded-xl border border-forest/10 text-sm text-ink/90 leading-relaxed mb-5" id="readerSummary">
+        Summary goes here.
+      </div>
+      <div class="flex items-center justify-between gap-3">
+        <span class="text-xs text-muted">Format: Online Web Reader / PDF</span>
+        <button onclick="closeReaderModal(); showToast('Opening digital reader portal for registered Manthan members...')" class="bg-forest hover:bg-forestLight text-parchment text-sm font-medium px-5 py-2.5 rounded-lg transition">
+          Launch Full E-Book →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden bg-forest text-parchment text-sm px-5 py-3.5 rounded-xl shadow-lg border border-gold/30"></div>
+
+  <script>
+    const ebooks = [
+      {
+        title: "Jharkhand General Knowledge & History Compendium",
+        author: "Manthan Digital Study Desk",
+        category: "JPSC & Jharkhand GK",
+        pages: "320 Pages • PDF",
+        summary: "Comprehensive digital reference covering Palamu & Jharkhand history, geography, tribal culture, and current affairs tailored for JPSC and JSSC exams."
+      },
+      {
+        title: "NCERT Class 6–12 Indian Polity & Economy Digest",
+        author: "UPSC Foundation Series",
+        category: "UPSC & NCERT",
+        pages: "410 Pages • E-Book",
+        summary: "Chapter-by-chapter consolidated NCERT notes designed for quick revision on tablets and laptops inside the Manthan reading hall."
+      },
+      {
+        title: "Quantitative Aptitude & Reasoning Formula Vault",
+        author: "Competitive Exam Archive",
+        category: "SSC & Banking",
+        pages: "245 Pages • PDF",
+        summary: "High-speed calculation tricks, DI sets, and previous-year solved papers for SSC CGL, CHSL, Railway, and IBPS exams."
+      },
+      {
+        title: "Godan (गोदान) — Munshi Premchand",
+        author: "Munshi Premchand",
+        category: "Hindi & English Literature",
+        pages: "340 Pages • E-Book",
+        summary: "Classic Hindi novel exploring rural Indian life, available in clean digital typography for leisure reading breaks."
+      },
+      {
+        title: "Modern Indian History (1857–1947) Revision Notes",
+        author: "Civil Services Archive",
+        category: "UPSC & NCERT",
+        pages: "290 Pages • PDF",
+        summary: "Chronological timelines, freedom movement summaries, and quick-reference charts for Prelims and Mains revision."
+      },
+      {
+        title: "The Discovery of India (Selected Chapters)",
+        author: "Jawaharlal Nehru",
+        category: "Hindi & English Literature",
+        pages: "210 Pages • E-Book",
+        summary: "Foundational reflections on Indian history, philosophy, and culture available for instant online reading."
+      }
+    ];
+
+    let activeCategory = 'All';
+
+    function renderBooks() {
+      const query = document.getElementById('bookSearch').value.toLowerCase();
+      const grid = document.getElementById('ebookGrid');
+      const filtered = ebooks.filter(b => {
+        const matchCat = activeCategory === 'All' || b.category === activeCategory;
+        const matchQuery = b.title.toLowerCase().includes(query) || b.author.toLowerCase().includes(query) || b.category.toLowerCase().includes(query);
+        return matchCat && matchQuery;
+      });
+
+      grid.innerHTML = filtered.map((book, idx) => `
+        <div class="bg-parchment rounded-xl p-6 border border-forest/10 shadow-sm flex flex-col justify-between hover:border-forest/30 transition">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[11px] font-semibold uppercase tracking-wider text-terracotta bg-terracotta/10 px-2.5 py-0.5 rounded">${book.category}</span>
+              <span class="text-[11px] text-muted">${book.pages}</span>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-forest leading-snug">${book.title}</h3>
+            <p class="text-xs text-muted mt-1">${book.author}</p>
+            <p class="text-xs text-ink/80 mt-3 leading-relaxed">${book.summary}</p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-forest/10 flex items-center justify-between">
+            <span class="text-xs font-medium text-emerald-700">● Online Access Only</span>
+            <button onclick="openReader(${ebooks.indexOf(book)})" class="text-xs font-semibold text-forest hover:text-terracotta transition">
+              Read Online →
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function setCategory(cat, btn) {
+      activeCategory = cat;
+      document.querySelectorAll('.cat-btn').forEach(b => {
+        b.classList.remove('bg-forest', 'text-parchment');
+        b.classList.add('bg-parchment', 'text-forest', 'border', 'border-forest/15');
+      });
+      btn.classList.remove('bg-parchment', 'text-forest', 'border', 'border-forest/15');
+      btn.classList.add('bg-forest', 'text-parchment');
+      renderBooks();
+    }
+
+    function filterBooks() {
+      renderBooks();
+    }
+
+    function openSeatModal(plan) {
+      const select = document.getElementById('selectedPlan');
+      for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].text.includes(plan) || plan.includes(select.options[i].text)) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+      document.getElementById('seatModal').classList.remove('hidden');
+    }
+
+    function closeSeatModal() {
+      document.getElementById('seatModal').classList.add('hidden');
+    }
+
+    function submitSeatForm(e) {
+      e.preventDefault();
+      closeSeatModal();
+      showToast('Seat request received! We will confirm your slot in Daltonganj shortly.');
+      e.target.reset();
+    }
+
+    function openReader(index) {
+      const book = ebooks[index];
+      document.getElementById('readerCategory').textContent = book.category;
+      document.getElementById('readerTitle').textContent = book.title;
+      document.getElementById('readerAuthor').textContent = book.author + ' • ' + book.pages;
+      document.getElementById('readerSummary').textContent = book.summary;
+      document.getElementById('readerModal').classList.remove('hidden');
+    }
+
+    function closeReaderModal() {
+      document.getElementById('readerModal').classList.add('hidden');
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.remove('hidden');
+      setTimeout(() => toast.classList.add('hidden'), 4000);
+    }
+
+    renderBooks();
+  </script>
+</body>
+</html>
